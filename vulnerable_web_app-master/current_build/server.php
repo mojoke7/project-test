@@ -90,6 +90,7 @@ if (isset($_POST['login_user'])) {
     }
 
     $stmt = $db->prepare("INSERT INTO `users` (`username`, `email`,`user_type`, `password`, `balance`) VALUES(?, ?,'?', ?, ?)"); 
+	$stmt->bind_param("sss", $username, $email, $user_type, $password, balance);
 
     if (!empty($username) && !empty($password) && mysqli_num_rows($results) == 0) {
         array_push($errors, "Username / Password combination not found!");
