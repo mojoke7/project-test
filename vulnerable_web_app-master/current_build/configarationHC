@@ -1,0 +1,7 @@
+<?php
+define('SERV', 'localhost');
+define('UserN', 'root');
+define('PassW', '@ThisI$Fortesting123!##');
+define('DB', 'test');
+?>
+
