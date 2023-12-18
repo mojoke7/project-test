@@ -1,0 +1,309 @@
+html {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(117, 196, 238); /* Hex is #4286f4 */
+    background-image: url("../img/leaves-pattern.png");
+    background-repeat: repeat;
+}
+
+header {
+    box-shadow: -1px 15px 39px -8px rgba(0,0,0,0.75);
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+
+}
+
+a, ul, li {
+    text-decoration: none;
+    color: rgb(117, 196, 238);
+}
+
+a:hover {
+    color: darkblue;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+}
+
+#projectBtn, #aboutBtn {
+    font-family: Pacifico, Arial, sans-serif;
+    font-size: 1.25em;
+}
+
+.item {
+    margin: auto;
+    display: inline;
+}
+
+#navbar {
+    align-self: flex-end;
+    padding: 1em;
+    margin: auto;
+
+}
+
+#navAbout {
+    margin-left: 20px;
+}
+
+#contactBtn {
+    cursor: pointer;
+}
+
+#contactBtn:hover {
+    color: rgb(117, 196, 238);
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 75%;
+    height: 80%;
+    padding: 1em;
+    border-radius: .15em;
+    text-align: center;
+    margin: 7% auto;
+    box-shadow: -1px 15px 39px -8px rgba(0,0,0,0.75);
+    background-color: white;
+}
+
+h1 {
+    order: 0;
+    font-family: Pacifico, Helvetica, sans-serif;
+    font-size: 66px;
+}
+
+.buttons {
+    display: inline;
+}
+
+button {
+    color: rgb(117, 196, 238);
+    background-color: white;
+    border: 1px solid rgb(117, 196, 238);
+    width: 200px;
+    height: 60px;
+    padding: auto;
+    margin: auto;
+    border-radius: .15em;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgb(117, 196, 238);
+    color: white;
+}
+
+#social {
+    margin-top: 1em;
+}
+/* All social media thumbnails provided courtesy https://simpleicons.org/ */
+.socialthumb {
+    width: 60px;
+    height: 60px;
+    padding: 1em;
+    margin: 1em;
+}
+
+.socialthumb:hover {
+    background-color: rgb(117, 196, 238);
+}
+
+#socialLinks {
+    display: none;
+}
+
+
+/* Thanks to W3 School for the modal CSS help */
+/* Thanks to Lynn Wallenstein for some CSS tips too */
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modalContent {
+    background-color: #fefefe;
+    display: none;
+    margin: 10%;
+    padding: 20px;
+    border: 1px solid rgb(117, 196, 238);
+    box-shadow: -1px 15px 39px -8px rgba(0,0,0,0.75);
+    transition: all 500ms;
+    flex-direction: row;
+}
+
+#contactModal {
+    text-align: center;
+}
+
+#projectModal {
+    text-align: center;
+}
+
+#closeProject, #closeAbout, #closeContact {
+    display: block;
+    cursor: pointer;
+    font-size: 2em;
+    width: 48px;
+    height: 48px;
+}
+
+#closeProject, #closeContact {
+    margin-right: 80%;
+}
+
+.gray {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: gray;
+    font-weight: bold;
+}
+
+#aboutHead, #workHead {
+    text-align: center;
+    margin: auto;
+    margin-bottom: .15em;
+    width: 90%;
+}
+
+#aboutHead {
+    grid-column: 1 / span 3;
+}
+
+#aboutdetail {
+    text-align: left;
+    height: auto;
+    width: 85%;
+    margin: auto;
+    margin-left: 1em;
+    padding: 1em;
+    grid-column: 2 / 3;
+}
+
+#headshot {
+    margin: auto;
+    grid-column: 1 / 2;
+    max-height: 272px;
+    max-width: 272px;
+}
+
+.projectLink {
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.25em;
+}
+
+.list-item {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.projectDetail {
+    color: black;
+}
+
+@media screen and (min-width: 1080px) {
+    #background,  .modalContent {
+        width: 1080px;
+        margin: auto;
+    }
+
+    .modalContent {
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    .modalContent {
+        background-color: #fefefe;
+        display: none;
+        height: auto;
+        width: 75%;
+        margin: auto;
+        border: 1px solid rgb(117, 196, 238);
+        box-shadow: -1px 15px 39px -8px rgba(0,0,0,0.75);
+        flex-direction: column;
+    }
+
+    #closeProject, #closeAbout, #closeContact {
+        display: block;
+        text-align: center;
+        font-size: 2em;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        padding: .2em;
+
+    }
+
+    #aboutHead, #workHead {
+        text-align: center;
+        font-size: 2em;
+        margin: .25em auto;
+    }
+
+    #aboutdetail {
+        width: 80%;
+        height: 90%;
+        margin: auto;
+        grid-column: 1;
+        font-size: .75em;
+    }
+
+    #aboutModal {
+        margin: 15% auto;
+    }
+
+    #projectModal, #contactModal {
+        margin: 25% auto;
+    }
+
+    #headshot {
+        /* Hide on mobile */
+        display: none;
+    }
+
+    .socialthumb {
+        width: 48px;
+        height: 48px;
+    }
+
+    .projectDetail {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 475px) {
+
+    #social {
+        display: none;
+    }
+
+    #socialLinks {
+        margin: 1em auto;
+        display: block;
+    }
+}
