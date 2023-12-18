@@ -17,7 +17,8 @@ if (isset($_POST['transfer'])) {
         array_push($errors, "Destination User is required");
     }
     if (count($errors) == 0) {
-        $user_check_query = "SELECT * FROM users WHERE username='$dest'";
+        $stmt = $db->prepare ("SELECT * FROM users WHERE username= ?;)
+        $stmt->bind_param ("s" ,$dest);
         $result = mysqli_query($db, $user_check_query);
         $user = mysqli_fetch_assoc($result);
         if ($user) {        // destination user was found
