@@ -89,8 +89,7 @@ if (isset($_POST['login_user'])) {
         array_push($errors, "Password is required");
     }
 
-    $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-    $results = mysqli_query($db, $query);
+    $stmt = $db->prepare("INSERT INTO `users` (`username`, `email`,`user_type`, `password`, `balance`) VALUES(?, ?,'?', ?, ?)"); 
 
     if (!empty($username) && !empty($password) && mysqli_num_rows($results) == 0) {
         array_push($errors, "Username / Password combination not found!");
