@@ -1,5 +1,6 @@
 <?php
 session_start();
+Include ‘configurationHC’ 
 
 // initializing variables
 $username = "";
@@ -7,7 +8,7 @@ $email    = "";
 $errors = array();
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'test');
+$db = mysqli_connect(SERV, UserN, PassW, DB);
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {                // register button submitted
